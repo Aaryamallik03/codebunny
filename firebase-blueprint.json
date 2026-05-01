@@ -1,0 +1,70 @@
+{
+  "entities": {
+    "Problem": {
+      "title": "Problem",
+      "description": "A coding challenge",
+      "type": "object",
+      "properties": {
+        "title": { "type": "string" },
+        "description": { "type": "string", "description": "Markdown content" },
+        "difficulty": { "type": "string", "enum": ["Easy", "Medium", "Hard"] },
+        "functionName": { "type": "string" },
+        "functionCallPattern": { "type": "string", "description": "e.g. solve($1, $2)" },
+        "testCases": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "input": { "type": "string" },
+              "output": { "type": "string" },
+              "hidden": { "type": "boolean" }
+            }
+          }
+        },
+        "authorId": { "type": "string" },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["title", "description", "difficulty", "functionName", "testCases"]
+    },
+    "UserProfile": {
+      "title": "User Profile",
+      "description": "Metadata for a user",
+      "type": "object",
+      "properties": {
+        "displayName": { "type": "string" },
+        "photoURL": { "type": "string" },
+        "problemsSolved": { "type": "integer" },
+        "xp": { "type": "integer" },
+        "email": { "type": "string" }
+      }
+    },
+    "Submission": {
+      "title": "Submission",
+      "description": "A user's code submission for a problem",
+      "type": "object",
+      "properties": {
+        "problemId": { "type": "string" },
+        "userId": { "type": "string" },
+        "code": { "type": "string" },
+        "language": { "type": "string" },
+        "status": { "type": "string", "enum": ["Accepted", "Wrong Answer", "Runtime Error", "Time Limit Exceeded", "Compilation Error"] },
+        "executionTime": { "type": "integer" },
+        "createdAt": { "type": "string", "format": "date-time" }
+      }
+    }
+  },
+  "firestore": {
+    "problems": {
+      "schema": "Problem",
+      "description": "A collection of coding problems"
+    },
+    "users": {
+      "schema": "UserProfile",
+      "description": "User profile data"
+    },
+    "submissions": {
+      "schema": "Submission",
+      "description": "History of user submissions"
+    }
+  }
+}
