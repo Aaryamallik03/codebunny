@@ -2,7 +2,7 @@
 
 ### A full-stack, AI-powered coding practice platform for tech bunnies 🥕
 
-**Code Bunny** is a LeetCode-inspired coding platform designed to make programming practice more interactive, engaging, and beginner-friendly. Users can browse coding problems, write and execute solutions, test their code, manage their profiles, and use AI-powered assistance while learning.
+**Code Bunny** is a LeetCode inspired coding platform designed to make programming practice more interactive, engaging, and beginner friendly. Users can browse coding problems, write and execute solutions, test their code, manage their profiles, and use AI-powered assistance while learning.
 
 ---
 
@@ -27,7 +27,7 @@
 
 ### 🤖 AI-Powered Assistance
 
-Powered by **Google Gemini**, Code Bunny can provide intelligent assistance to users while solving problems.
+Powered by Google Gemini, Code Bunny can provide intelligent assistance to users while solving problems.
 
 Potential AI capabilities include:
 
