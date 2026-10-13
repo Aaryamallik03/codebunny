@@ -1,4 +1,4 @@
-## 🐰 Code Bunny
+## 🐰 Code Bunny 
 
 ### A full-stack, AI-powered coding practice platform for tech bunnies 🥕
 
